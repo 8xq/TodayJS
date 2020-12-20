@@ -52,15 +52,45 @@ const return_Weekday = () => {
     return weekday[day_info];
 }
 
+/*
+This will simply take the date and add the suffix for the date
+For example instead of Novemember 3 it will now add "Rd" as a suffix
+*/
+const AppendDate = () => {
+    switch (date) {
+        case 1:
+            return date + "st";
+            break;
+        case 2:
+            return date + "nd";
+            break;
+        case 3:
+            return date + "rd";
+            break;
+        case 21:
+            return date + "st";
+            break;
+        case 22:
+            return date + "nd";
+            break;
+        case 23:
+            return date + "3rd";
+            break;
+        case 31:
+            return date + "st";
+            break;
+        default:
+            return date + "th";
+            break;
 
+    }
+}
 /*
 This function is called via the Onload events
 This is where the values will be displayed to the user
 */
 let LoadInfo = () => {
     document.getElementById('Date_header').innerHTML = Return_Month();
-    document.getElementById('year').innerHTML = year;
-    document.getElementById('day').innerHTML = date;
+    document.getElementById('day').innerHTML = AppendDate();
     document.getElementById('day_text').innerHTML = return_Weekday();
-    document.getElementById('All_Date').innerHTML = date + "/" + month + "/" + year;
 }
