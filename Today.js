@@ -84,6 +84,7 @@ const AppendDate = () => {
             break;
     }
 }
+
 /*
 This function is called via the Onload events
 This is where the values will be displayed to the user
