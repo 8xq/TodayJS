@@ -5,12 +5,11 @@
 
 /*
 This will simply give us the "Date" "Month" "Year";
-We then split this by the "/" to be able to get individual parts
 */
-let today = new Date().toLocaleDateString().split("/");
-const date = today[0];
-const month = today[1];
-const year = today[2];
+let today = new Date();
+const month = today.getMonth();
+const day = today.getDay();
+const date = today.getDate();
 
 /*
 As the month returns a numberic value such as 12 being decemeber
@@ -32,7 +31,7 @@ const Return_Month = () => {
     month_text[10] = "October";
     month_text[11] = "November";
     month_text[12] = "December";
-    return month_text[month];
+    return month_text[month +1];
 }
 
 /*
@@ -82,9 +81,9 @@ const AppendDate = () => {
         default:
             return date + "th";
             break;
+
     }
 }
-
 /*
 This function is called via the Onload events
 This is where the values will be displayed to the user
