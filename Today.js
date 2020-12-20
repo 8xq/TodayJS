@@ -82,7 +82,6 @@ const AppendDate = () => {
         default:
             return date + "th";
             break;
-
     }
 }
 /*
