@@ -4,7 +4,6 @@ This is a simple JS project that will show the current Date on a minimal card de
 
 ## Plans
 * Ensure it works for all formats of Dates
-* ~~Add suffix to the date (3rd , 2nd ect)~~ (done)
 * Maybe add "events" like christmas as a display
 
 
